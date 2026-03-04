@@ -18,8 +18,8 @@ export default {
         pixelify: ['Pixelify Sans', 'sans-serif'],
       },
       colors: {
-        primary: '#00ccff',
-        secondary: '#ff00ff',
+        primary: '#3b82f6',
+        secondary: '#ec4899',
         dark: "#111111",
       },
     },

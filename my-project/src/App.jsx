@@ -30,7 +30,7 @@ const App = () => {
   }, []);
 
   return (
-    <main className="bg-white dark:bg-gray-950 min-h-screen duration-300">
+    <main className="bg-gray-950 min-h-screen duration-300">
       <Navbar />
       <Hero togglePlay={togglePlay} />
       <Quotes />

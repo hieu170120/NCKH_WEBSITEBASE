@@ -4,8 +4,7 @@ import { BiPlayCircle } from "react-icons/bi";
 
 const Banner2 = ({ togglePlay }) => {
   return (
-    // 1. Thay 'ml-auto mr-0 max-w-[90%]' bằng 'w-full'
-    <div className="py-12 sm:py-0 relative w-full">
+    <div className="py-16 relative w-full bg-gray-950 transition-colors duration-300">
       {/* 2. Thêm mx-auto vào container */}
       <div className="container mx-auto px-4 min-h-[620px] flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center w-full max-w-6xl">
@@ -18,21 +17,20 @@ const Banner2 = ({ togglePlay }) => {
                 data-aos-delay="300"
                 className="text-4xl font-semibold leading-tight"
               >
-                GET READY TO ENJOY VR{" "}
+                Own Digital{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                  Movies WITH OUR PLATFORM
+                  Assets & NFTs
                 </span>
               </h1>
               <p data-aos="fade-up" data-aos-delay="500" className="text-gray-300">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab
-                molestias quia exercitationem ex inventore labore beatae cumque
-                et quaerat voluptas?
+                Trade, collect, and monetize your digital creations in a secure blockchain-powered ecosystem.
               </p>
               <div className="flex gap-6 justify-center sm:justify-start">
                 <button
                   data-aos="fade-up"
                   data-aos-delay="700"
                   className="primary-btn"
+                  aria-label="Get started with VR experience"
                 >
                   Get Started
                 </button>
@@ -40,9 +38,12 @@ const Banner2 = ({ togglePlay }) => {
                   data-aos="fade-up"
                   data-aos-delay="900"
                   onClick={togglePlay}
-                  className="flex items-center gap-2 hover:text-primary duration-300"
+                  className="flex items-center gap-2 font-semibold text-white
+                             hover:text-primary transition-colors
+                             focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1"
+                  aria-label="Play demo video"
                 >
-                  <BiPlayCircle className="text-3xl" />
+                  <BiPlayCircle className="text-3xl" aria-hidden="true" />
                   See Demo
                 </button>
               </div>
@@ -53,7 +54,12 @@ const Banner2 = ({ togglePlay }) => {
 
           {/* image section */}
           <div data-aos="zoom-in" className="order-1 sm:order-2">
-            <img src={BannerPng} alt="VR Guy" className="w-full max-w-[450px] drop-shadow-2xl" />
+            <img 
+              src={BannerPng} 
+              alt="Person enjoying VR experience with our platform"
+              className="w-full max-w-[450px] drop-shadow-2xl"
+              loading="lazy"
+            />
           </div>
         </div>
       </div>

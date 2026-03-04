@@ -5,39 +5,39 @@ import { SlNote } from "react-icons/sl";
 
 const FeaturesData = [
   {
-    name: "Captivating Videos",
+    name: "Immersive Experiences",
     icon: <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />,
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Dive into stunning 3D environments with next-generation graphics and spatial audio.",
     aosDelay: "300",
   },
   {
-    name: "Safe Transactions",
+    name: "Secure Transactions",
     icon: <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />,
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Buy, sell, and trade with blockchain security and transparent smart contracts.",
     aosDelay: "500",
   },
   {
-    name: "Experience Reality",
+    name: "Social Connectivity",
     icon: <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />,
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Connect, collaborate, and build communities with people from around the world.",
     aosDelay: "700",
   },
 ];
 
 const Features = () => {
   return (
-    <section className="bg-dark text-white py-14">
+    <section className="bg-gray-800 text-white py-16">
       {/* Container với mx-auto để căn giữa và px-4 để tránh dính lề mobile */}
-      <div className="container mx-auto px-4 sm:min-h-[600px] flex flex-col justify-center items-center">
+      <div className="container mx-auto px-4 min-h-[600px] flex flex-col justify-center items-center">
         <div className="w-full max-w-6xl">
           <h1
             data-aos="fade-up"
             className="text-3xl font-semibold text-center sm:text-4xl mb-12"
           >
-            Why Choose Us
+            Why Join Our Metaverse
           </h1>
 
           {/* Grid section - Tự động căn giữa các item bên trong */}

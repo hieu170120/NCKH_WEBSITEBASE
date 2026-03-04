@@ -2,15 +2,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ffffff;
-  --color-background-dark: #111827;
-  --color-navbar-bg: #ffffff;
-  --color-navbar-bg-dark: #1f2937;
-  --color-text: #000000;
-  --color-text-dark: #ffffff;
-  
-  /* Thêm màu primary/secondary để blob hoạt động */
-  --color-primary: #3b82f6; 
+  --color-primary: #3b82f6;
   --color-secondary: #ec4899;
 }
 
@@ -18,20 +10,26 @@
   * {
     transition: background-color 0.3s ease, color 0.3s ease;
   }
+  
+  :root {
+    --color-background: #111827;
+    --color-navbar-bg: #1f2937;
+    --color-text: #ffffff;
+    --color-primary: #3b82f6;
+    --color-secondary: #ec4899;
+  }
+  
   html {
     background-color: var(--color-background);
     color: var(--color-text);
-  }
-  html.dark {
-    background-color: var(--color-background-dark);
-    color: var(--color-text-dark);
   }
 }
 
 @layer components {
   .primary-btn {
-    @apply bg-gradient-to-r from-blue-500 to-pink-500 text-white py-2 px-6 rounded-lg 
-           hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg;
+    @apply bg-gradient-to-r from-primary to-secondary text-white py-2 px-6 rounded-lg 
+           hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg
+           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
   }
 }
 

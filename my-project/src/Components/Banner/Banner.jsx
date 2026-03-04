@@ -5,9 +5,7 @@ import { BiPlayCircle } from "react-icons/bi";
 
 const Banner = ({ togglePlay }) => {
   return (
-    // Sửa 1: Thêm bg-white dark:bg-gray-950 và bỏ py-12 thay bằng py-10 để liền mạch nền
-    <section className="py-10 relative bg-white dark:bg-gray-950 text-black dark:text-white transition-colors duration-300">
-      {/* Sửa 2: Thêm mx-auto và px-4 để nội dung luôn nằm chính giữa màn hình */}
+    <section className="py-16 relative bg-gray-950 text-white transition-colors duration-300">
       <div className="container mx-auto px-4 min-h-[620px] flex items-center justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 place-items-center w-full max-w-6xl">
           
@@ -30,23 +28,24 @@ const Banner = ({ togglePlay }) => {
                 data-aos-delay="300"
                 className="text-4xl font-semibold leading-tight"
               >
-                GET READY TO ENJOY VR
+                Build Your Digital
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                  {" "}Movies with Our Platform
+                  {" "}Identity
                 </span>
               </h1>
               <p 
                 data-aos="fade-up" 
                 data-aos-delay="500"
-                className="text-gray-600 dark:text-gray-300"
+                className="text-gray-300"
               >
-                Hệ thống nghiên cứu của sinh viên IT trường UTE ứng dụng công nghệ thực tế ảo vào đời sống thực tiễn.
+                Create your avatar, express yourself, and connect with millions of users in an infinite virtual universe.
               </p>
               <div className="flex gap-6 justify-center sm:justify-start">
                 <button
                   data-aos="fade-up"
                   data-aos-delay="700"
                   className="primary-btn px-6 py-2 rounded-lg"
+                  aria-label="Get started with VR platform"
                 >
                   Get Started
                 </button>
@@ -54,7 +53,9 @@ const Banner = ({ togglePlay }) => {
                   data-aos="fade-up"
                   data-aos-delay="700"
                   onClick={togglePlay}
-                  className="flex items-center gap-2 hover:text-primary transition-colors"
+                  className="flex items-center gap-2 font-semibold dark:text-white
+                             hover:text-primary transition-colors group
+                             focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1"
                   aria-label="Play demo video"
                 >
                   <BiPlayCircle className="text-3xl" aria-hidden="true" />
