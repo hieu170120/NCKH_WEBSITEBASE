@@ -9,37 +9,36 @@ import {
 
 const FooterLinks = [
   { id: 1, title: "Home", link: "#" },
-  { id: 2, title: "About", link: "#about" },
-  { id: 3, title: "Contact", link: "#contact" },
+  { id: 2, title: "Menu", link: "#menu" },
+  { id: 3, title: "About", link: "#about" },
   { id: 4, title: "Blog", link: "#blog" },
 ];
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 mt-14 rounded-t-3xl transition-colors duration-300">
-      {/* Thêm mx-auto để căn giữa footer */}
+    <footer className="bg-[#2A1810] mt-14 rounded-t-3xl transition-colors duration-300">
       <div data-aos="fade-down" className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 py-10 gap-10">
           
           {/* Company Details */}
-          <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold mb-3 flex items-center gap-3 text-white">
-              Meta<span className="text-primary">Verse</span>
-            </h1>
-            <p className="text-sm text-gray-400">
-              Welcome to the next evolution of the internet. We're building a thriving ecosystem where creators, 
-              developers, and users can connect, create, and thrive together in immersive virtual worlds.
+          <div className="py-8 px-4 space-y-6">
+            <h3 className="h3 mb-4 flex items-center gap-3 text-[#F5E6D3] font-serif">
+              Brew<span className="text-[#D4A574]">&</span>Soul
+            </h3>
+            <p className="small text-[#D4A574]/70">
+              Brew & Soul is dedicated to delivering the finest specialty coffee experience. 
+              From ethically sourced beans to expert baristas, we craft every cup with care.
             </p>
             
             {/* Contact section */}
-            <div className="mt-6 space-y-3 text-gray-300">
+            <div className="mt-6 space-y-3 text-[#D4A574]/70">
               <div className="flex items-center gap-3">
-                <FaLocationArrow className="text-primary" />
-                <p>Tp. Thủ Đức, TP. Hồ Chí Minh</p>
+                <FaLocationArrow className="text-[#8B6F47]" />
+                <p>123 Coffee Street, Brew City, BC 12345</p>
               </div>
               <div className="flex items-center gap-3">
-                <FaMobileAlt className="text-primary" />
-                <p>+84 123 456 789</p>
+                <FaMobileAlt className="text-[#8B6F47]" />
+                <p>+1 (555) 123-4567</p>
               </div>
             </div>
 
@@ -48,21 +47,21 @@ const Footer = () => {
               <a 
                 href="#" 
                 aria-label="Follow us on Facebook"
-                className="text-3xl text-gray-400 hover:text-primary duration-300 focus:outline-none focus:ring-2 focus:ring-primary rounded p-1"
+                className="text-3xl text-[#D4A574] hover:text-[#8B6F47] duration-300 focus:outline-none focus:ring-2 focus:ring-[#8B6F47] rounded p-1"
               >
                 <FaFacebook />
               </a>
               <a 
                 href="#" 
                 aria-label="Follow us on Instagram"
-                className="text-3xl text-gray-400 hover:text-primary duration-300 focus:outline-none focus:ring-2 focus:ring-primary rounded p-1"
+                className="text-3xl text-[#D4A574] hover:text-[#8B6F47] duration-300 focus:outline-none focus:ring-2 focus:ring-[#8B6F47] rounded p-1"
               >
                 <FaInstagram />
               </a>
               <a 
                 href="#" 
                 aria-label="Follow us on LinkedIn"
-                className="text-3xl text-gray-400 hover:text-primary duration-300 focus:outline-none focus:ring-2 focus:ring-primary rounded p-1"
+                className="text-3xl text-[#D4A574] hover:text-[#8B6F47] duration-300 focus:outline-none focus:ring-2 focus:ring-[#8B6F47] rounded p-1"
               >
                 <FaLinkedin />
               </a>
@@ -72,13 +71,13 @@ const Footer = () => {
           {/* Footer Links section */}
           <div className="grid grid-cols-2 sm:grid-cols-3 col-span-2 md:pl-10">
             <div className="py-8 px-4">
-              <h1 className="text-xl font-bold mb-3 text-white">Quick Links</h1>
-              <ul className="space-y-3 text-gray-400">
+              <h4 className="text-lg font-bold mb-4 text-[#F5E6D3] font-serif">Quick Links</h4>
+              <ul className="space-y-3 text-[#D4A574]/70">
                 {FooterLinks.map((link) => (
-                  <li key={link.id} className="hover:translate-x-1 hover:text-primary duration-300">
+                  <li key={link.id} className="hover:translate-x-1 hover:text-[#8B6F47] duration-300">
                     <a 
                       href={link.link}
-                      className="focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1 block"
+                      className="focus:outline-none focus:ring-2 focus:ring-[#8B6F47] rounded px-2 py-1 block"
                     >
                       {link.title}
                     </a>
@@ -88,13 +87,13 @@ const Footer = () => {
             </div>
             
             <div className="py-8 px-4">
-              <h1 className="text-xl font-bold mb-3 text-white">Resources</h1>
-              <ul className="space-y-3 text-gray-400">
-                {["Documentation", "YOLO v8", "Dataset"].map((item, index) => (
-                  <li key={index} className="hover:translate-x-1 hover:text-primary duration-300">
+              <h4 className="text-lg font-bold mb-4 text-[#F5E6D3] font-serif">Coffee Varieties</h4>
+              <ul className="space-y-3 text-[#D4A574]/70">
+                {["Espresso", "Latte", "Cappuccino"].map((item, index) => (
+                  <li key={index} className="hover:translate-x-1 hover:text-[#8B6F47] duration-300">
                     <a 
                       href="#"
-                      className="focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1 block"
+                      className="focus:outline-none focus:ring-2 focus:ring-[#8B6F47] rounded px-2 py-1 block"
                     >
                       {item}
                     </a>
@@ -104,13 +103,13 @@ const Footer = () => {
             </div>
 
             <div className="py-8 px-4">
-              <h1 className="text-xl font-bold mb-3 text-white">Support</h1>
-              <ul className="space-y-3 text-gray-400">
+              <h4 className="text-lg font-bold mb-4 text-[#F5E6D3] font-serif">Support</h4>
+              <ul className="space-y-3 text-[#D4A574]/70">
                 {["FAQ", "Privacy Policy", "Terms"].map((item, index) => (
-                  <li key={index} className="hover:translate-x-1 hover:text-primary duration-300">
+                  <li key={index} className="hover:translate-x-1 hover:text-[#8B6F47] duration-300">
                     <a 
                       href="#"
-                      className="focus:outline-none focus:ring-2 focus:ring-primary rounded px-2 py-1 block"
+                      className="focus:outline-none focus:ring-2 focus:ring-[#8B6F47] rounded px-2 py-1 block"
                     >
                       {item}
                     </a>
@@ -122,8 +121,8 @@ const Footer = () => {
         </div>
         
         {/* Bottom Bar */}
-        <div className="text-center py-5 border-t-2 border-gray-700 text-gray-500 text-sm">
-          © 2026 Vũ Minh Hiếu - UTE NCKH. All rights reserved.
+        <div className="text-center py-5 border-t-2 border-[#8B6F47]/30 text-[#D4A574]/50 text-sm">
+          © 2024 Brew & Soul Coffee House. All rights reserved.
         </div>
       </div>
     </footer>

@@ -33,14 +33,14 @@ const Navbar = () => {
         setShowMenu(false);
     }
   return (
-    <div className='navbar relative z-50 shadow-md duration-300 bg-gray-900'>
+    <div className='navbar relative z-50 shadow-md duration-300 bg-[#3D2817]'>
         <div className="container py-2 md:py-0">
             <div className="flex justify-between items-center">
                 {/*logo section*/}
                 <div className='flex items-center gap-3'>
                     <img src={Logo} alt="UTE NCKH Logo" className="h-16" />
-                    <p className='text-3xl text-white'> 
-                    UTE  <span className="font-bold">NCKH</span>
+                    <p className='text-3xl text-[#F5E6D3] font-serif'> 
+                    Brew <span className="font-bold">&</span> Soul
                 </p>
                 </div>
                 {/* desktop section*/}
@@ -52,8 +52,8 @@ const Navbar = () => {
                                         <li key={id} className='py-4'>
                                             <a 
                                               href={link} 
-                                              className="text-xl font-semibold text-white
-                                              hover:text-primary py-2 hover:border-b-2 hover:border-secondary 
+                                              className="text-xl font-semibold text-[#F5E6D3]
+                                              hover:text-[#D4A574] py-2 hover:border-b-2 hover:border-[#D4A574] 
                                               transition-colors duration-500 focus:outline-none focus:ring-2 focus:ring-primary rounded px-2"
                                             >
                                               {name}
@@ -79,15 +79,15 @@ const Navbar = () => {
             
             {/* Mobile Menu */}
             <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${showMenu ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <nav className='bg-gray-800 py-4'>
+                <nav className='bg-[#3D2817] py-4'>
                     <ul className='space-y-2'>
                         {NavLinks.map(({id, name, link}) => (
                             <li key={id} className='px-4'>
                                 <a 
                                   href={link}
                                   onClick={handleLinkClick}
-                                  className='block py-2 text-lg font-semibold text-white
-                                  hover:text-primary transition-colors duration-300
+                                  className='block py-2 text-lg font-semibold text-[#F5E6D3]
+                                  hover:text-[#D4A574] transition-colors duration-300
                                   focus:outline-none focus:ring-2 focus:ring-primary rounded px-2'
                                 >
                                   {name}

@@ -18,9 +18,12 @@ export default {
         pixelify: ['Pixelify Sans', 'sans-serif'],
       },
       colors: {
-        primary: '#3b82f6',
-        secondary: '#ec4899',
-        dark: "#111111",
+        primary: '#8B6F47',      // Coffee Brown
+        secondary: '#D4A574',    // Caramel
+        accent: '#A0826D',       // Mocha
+        warning: '#C79A6D',      // Latte
+        success: '#6B4423',      // Dark Brown
+        dark: "#F5E6D3",         // Cream/Light
       },
     },
   },

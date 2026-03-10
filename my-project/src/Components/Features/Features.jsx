@@ -5,58 +5,58 @@ import { SlNote } from "react-icons/sl";
 
 const FeaturesData = [
   {
-    name: "Immersive Experiences",
-    icon: <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />,
+    name: "Single-Origin Beans",
+    icon: <FaCameraRetro className="text-5xl text-[#8B6F47] group-hover:text-[#D4A574] transition-colors duration-300" />,
     link: "#",
-    description: "Dive into stunning 3D environments with next-generation graphics and spatial audio.",
+    description: "Ethically sourced from coffee farms around the world, each origin offers unique flavors.",
     aosDelay: "300",
   },
   {
-    name: "Secure Transactions",
-    icon: <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />,
+    name: "Artisanal Roasting",
+    icon: <GiNotebook className="text-5xl text-[#8B6F47] group-hover:text-[#D4A574] transition-colors duration-300" />,
     link: "#",
-    description: "Buy, sell, and trade with blockchain security and transparent smart contracts.",
+    description: "Small-batch roasting brings out the best in every bean with precision and care.",
     aosDelay: "500",
   },
   {
-    name: "Social Connectivity",
-    icon: <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />,
+    name: "Cozy Community",
+    icon: <SlNote className="text-5xl text-[#8B6F47] group-hover:text-[#D4A574] transition-colors duration-300" />,
     link: "#",
-    description: "Connect, collaborate, and build communities with people from around the world.",
+    description: "Experience a welcoming space where coffee lovers connect and create memories together.",
     aosDelay: "700",
   },
 ];
 
 const Features = () => {
   return (
-    <section className="bg-gray-800 text-white py-16">
-      {/* Container với mx-auto để căn giữa và px-4 để tránh dính lề mobile */}
+    <section className="bg-[#2A1810] text-[#F5E6D3] py-24">
       <div className="container mx-auto px-4 min-h-[600px] flex flex-col justify-center items-center">
         <div className="w-full max-w-6xl">
-          <h1
+          <h2
             data-aos="fade-up"
-            className="text-3xl font-semibold text-center sm:text-4xl mb-12"
+            className="h2 text-center mb-16 font-serif"
           >
-            Why Join Our Metaverse
-          </h1>
+            Why Choose <span className='bg-gradient-to-r from-[#8B6F47] to-[#D4A574] bg-clip-text text-transparent'>Brew & Soul</span>
+          </h2>
 
-          {/* Grid section - Tự động căn giữa các item bên trong */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
             {FeaturesData.map((data, index) => (
               <div
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={data.aosDelay}
-                className="text-center group space-y-3 sm:space-y-6 p-4 sm:py-10 bg-black/40 hover:bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_40px_#007cfff0] text-white hover:text-black rounded-lg duration-300 border border-white/10"
+                className="card group space-y-6 text-center bg-[#3D2817] border-[#8B6F47]/30"
               >
-                <div className="grid place-items-center"> {data.icon}</div>
-                <h1 className="text-2xl font-bold">{data.name}</h1>
-                <p className="text-gray-300 group-hover:text-black">{data.description}</p>
+                <div className="flex justify-center"> 
+                  {data.icon}
+                </div>
+                <h3 className="h3 font-serif">{data.name}</h3>
+                <p className="body text-[#D4A574]/80">{data.description}</p>
                 <a
                   href={data.link}
-                  className="inline-block text-lg font-semibold py-3 text-primary group-hover:text-black duration-300"
+                  className="link-hover inline-block font-semibold text-[#D4A574]"
                 >
-                  Learn More
+                  Learn More →
                 </a>
               </div>
             ))}
